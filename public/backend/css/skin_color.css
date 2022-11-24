@@ -343,7 +343,7 @@ body.dark-skin {
   border-color: rgba(255, 255, 255, 0.12);
   background-color:  var(--bg-color); }
 .dark-skin .table {
-  color: #8a99b5; }
+  color: #03173d; }
   .dark-skin .table > thead.thead-light th {
     background-color:  var(--bg-color);
     color:  var(--header-color); }

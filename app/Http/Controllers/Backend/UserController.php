@@ -38,11 +38,37 @@ class UserController extends Controller
             'alert-type' => 'success'
         ); 
 
-        return redirect()->route('user.view')->with($notifcation);
+        return redirect()->route('users.view')->with($notifcation);
     }
 
     public function user_edit($id){
         $editData = User::find($id);
         return view('backend.user.user_edit', compact('editData'));
+    }
+
+    public function user_update(Request $request, $id){
+        $data = User::find($id);
+    	$data->name = $request->name;
+    	$data->email = $request->email;
+        $data->usertype = $request->usertype;
+    	$data->save();
+
+    	$notification = array(
+    		'message' => 'User Updated Successfully',
+    		'alert-type' => 'info'
+    	);
+
+    	return redirect()->route('users.view')->with($notification);
+    }
+
+    public function user_delete($id){
+    	$user = User::find($id);
+    	$user->delete();
+
+    	$notification = array(
+    		'message' => 'User Deleted Successfully',
+    		'alert-type' => 'info'
+    	);
+    	return redirect()->route('users.view')->with($notification);
     }
 }

@@ -16,8 +16,7 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col">
-                              {{-- action="{{ route('users.update', $editData->id) }}" --}}
-                                <form method="post" >
+                                <form method="post" action="{{ route('users.update', $editData->id) }}">
                                     @csrf
                                     <div class="row">
                                         <div class="col-12">
@@ -29,7 +28,7 @@
                                                     <div class="form-group">
                                                         <h5>User Role <span class="text-danger">*</span></h5>
                                                         <div class="controls">
-                                                            <select name="role" required="" class="form-control">
+                                                            <select name="usertype" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">Select
                                                                     Role</option>
                                                                 <option value="Admin"

@@ -28,7 +28,8 @@
                         <div class="box">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Users List With Full Features</h3>
-                                <a href="{{route('users.add')}}" style="float: right" class="text-white btn  btn-primary mb-5"> Add User
+                                <a href="{{ route('users.add') }}" style="float: right"
+                                    class="text-white btn  btn-primary mb-5"> Add User
                                 </a>
                             </div>
                             <!-- /.box-header -->
@@ -48,12 +49,14 @@
                                             @foreach ($allData as $key => $user)
                                                 <tr>
                                                     <td>{{ $key + 1 }}</td>
-                                                    <td>{{$user->usertype}}</td>
+                                                    <td>{{ $user->usertype }}</td>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
                                                     <td>
-                                                        <a href="{{route('users.edit', $user->id)}}" class="text-white btn btn-info">Edit</a>
-                                                        <a href="http://" class="text-white btn btn-info">Delete</a>
+                                                        <a href="{{ route('users.edit', $user->id) }}"
+                                                            class="text-white btn btn-info">Edit</a>
+                                                        <a href="{{ route('users.delete', $user->id) }}"
+                                                            class="text-white btn btn-info">Delete</a>
                                                     </td>
                                                 </tr>
                                             @endforeach
