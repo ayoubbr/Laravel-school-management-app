@@ -4,17 +4,17 @@
         <div class="container-full">
             <!-- Main content -->
             <section class="content">
-
+                {{-- //////////////////////////////// --}}
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
                         <h4 class="box-title">Add User</h4>
-                         </div>
+                    </div>
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="row">
                             <div class="col">
-                                <form method="POST" action="{{route('users.store')}}">
+                                <form method="POST" action="{{ route('users.store') }}">
                                     @csrf
                                     <div class="row">
                                         <div class="col-12">
