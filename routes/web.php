@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -36,4 +37,13 @@ Route::prefix('users')->group(function () {
     Route::get('/edit/{id}', [UserController::class, 'user_edit'])->name('users.edit');
     Route::post('/update/{id}', [UserController::class, 'user_update'])->name('users.update');
     Route::get('/delete/{id}', [UserController::class, 'user_delete'])->name('users.delete');
+});
+
+/// User Profile and Change Password 
+Route::prefix('profile')->group(function () {
+    Route::get('/view', [ProfileController::class, 'profile_view'])->name('profile.view');
+    Route::get('/edit', [ProfileController::class, 'profile_edit'])->name('profile.edit');
+    // Route::post('/store', [ProfileController::class, 'ProfileStore'])->name('profile.store');
+    // Route::get('/password/view', [ProfileController::class, 'PasswordView'])->name('password.view');
+    // Route::post('/password/update', [ProfileController::class, 'PasswordUpdate'])->name('password.update');
 });

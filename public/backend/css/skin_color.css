@@ -238,7 +238,7 @@ body.dark-skin {
       color: #8a99b5; }
   .dark-skin .box .box-footer {
     background-color: var(--main-color);
-    border-color: rgba(255, 255, 255, 0.12); }
+    border-color: rgba(36, 35, 35, 0.135); }
   .dark-skin .box .box-transparent {
     background-color: transparent !important;
     box-shadow: none !important; }

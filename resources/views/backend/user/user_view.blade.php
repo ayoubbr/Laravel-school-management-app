@@ -56,7 +56,7 @@
                                                         <a href="{{ route('users.edit', $user->id) }}"
                                                             class="text-white btn btn-info">Edit</a>
                                                         <a href="{{ route('users.delete', $user->id) }}"
-                                                            class="text-white btn btn-info">Delete</a>
+                                                            class="text-white btn btn-info" id="delete">Delete</a>
                                                     </td>
                                                 </tr>
                                             @endforeach

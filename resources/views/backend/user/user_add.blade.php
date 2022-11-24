@@ -4,7 +4,6 @@
         <div class="container-full">
             <!-- Main content -->
             <section class="content">
-                {{-- //////////////////////////////// --}}
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
