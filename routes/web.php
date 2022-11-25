@@ -17,7 +17,7 @@ use App\Http\Controllers\Backend\ProfileController;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('welcome');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -43,7 +43,8 @@ Route::prefix('users')->group(function () {
 Route::prefix('profile')->group(function () {
     Route::get('/view', [ProfileController::class, 'profile_view'])->name('profile.view');
     Route::get('/edit', [ProfileController::class, 'profile_edit'])->name('profile.edit');
-    // Route::post('/store', [ProfileController::class, 'ProfileStore'])->name('profile.store');
-    // Route::get('/password/view', [ProfileController::class, 'PasswordView'])->name('password.view');
-    // Route::post('/password/update', [ProfileController::class, 'PasswordUpdate'])->name('password.update');
+    Route::post('/store', [ProfileController::class, 'profile_store'])->name('profile.store');
+    Route::get('/password/view', [ProfileController::class, 'password_view'])->name('password.view');
+    Route::post('/password/update', [ProfileController::class, 'password_update'])->name('password.update');
 });
+

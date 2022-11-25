@@ -13,7 +13,7 @@
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="{{ asset('backend/css/vendors_css.css') }}">
-
+    
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
     <!-- Style-->
     <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">

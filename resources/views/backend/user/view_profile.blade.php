@@ -15,7 +15,8 @@
                                 <h3 class="widget-user-username">User Name : {{ $user->name }}</h3>
 
 
-                                <a href="{{ route('profile.edit') }}" style="float: right;" class="text-white btn  btn-info mb-5"> Edit
+                                <a href="{{ route('profile.edit') }}" style="float: right;"
+                                    class="text-white btn  btn-info mb-5"> Edit
                                     Profile</a>
 
                                 <h6 class="widget-user-desc">User Type : {{ $user->usertype }}</h6>
@@ -24,11 +25,12 @@
 
                             </div>
                             <div class="widget-user-image">
-                                {{-- <img class="rounded-circle" src=" {{ asset('backend/images/user3-128x128.jpg') }}"
-                                    alt="User Avatar"> --}}
-                                <img class="rounded-circle"
+                                {{-- <img class="rounded-circle"
                                     src="{{ !empty($user->image) ? url('upload/user_images/' . $user->image) : url('upload/no_image.jpg') }} "
-                                    alt="User Avatar">
+                                    alt="User Avatar"> --}}
+                                <img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}"
+                                    alt="{{ Auth::user()->name }}">
+
                             </div>
                             <div class="box-footer">
                                 <div class="row">

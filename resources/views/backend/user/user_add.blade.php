@@ -22,13 +22,14 @@
                                                     <div class="form-group">
                                                         <h5>User Role <span class="text-danger">*</span></h5>
                                                         <div class="controls">
-                                                            <select name="usertype" id="select" required
+                                                            <select name="usertype" id="select" 
                                                                 class="form-control">
                                                                 <option value="" selected disabled>Select Role
                                                                 </option>
                                                                 <option value="Admin">Admin</option>
                                                                 <option value="User">User</option>
                                                             </select>
+                                                          
                                                         </div>
                                                     </div>
                                                 </div>
@@ -37,7 +38,10 @@
                                                         <h5>Username <span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <input type="text" name="name" class="form-control"
-                                                                required>
+                                                                >
+                                                                @error('name')
+                                                                <span class="text-danger">{{ $message }}</span>
+                                                            @enderror
                                                         </div>
                                                     </div>
                                                 </div>
@@ -48,7 +52,10 @@
                                                         <h5>Email <span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <input type="email" name="email" class="form-control"
-                                                                required>
+                                                                >
+                                                                @error('email')
+                                                                <span class="text-danger">{{ $message }}</span>
+                                                            @enderror
                                                         </div>
                                                     </div>
                                                 </div>
@@ -57,7 +64,10 @@
                                                         <h5>Password <span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <input type="password" name="password" class="form-control"
-                                                                required>
+                                                                >
+                                                                @error('password')
+                                                                <span class="text-danger">{{ $message }}</span>
+                                                            @enderror
                                                         </div>
                                                     </div>
                                                 </div>
@@ -67,7 +77,7 @@
                                                 <div class="controls">
                                                     <input type="password" name="password2"
                                                         data-validation-match-match="password" class="form-control"
-                                                        required>
+                                                        >
                                                 </div>
                                             </div> --}}
                                         </div>

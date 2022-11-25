@@ -47,12 +47,12 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ route('profile.view') }} "><i class="ti-more"></i>Your Profile</a></li>
-                    <li><a href=""><i class="ti-more"></i>Change Password</a></li>
+                    <li><a href="{{ route('password.view') }} "><i class="ti-more"></i>Change Password</a></li>
 
                 </ul>
             </li>
 
-            <li class="treeview">
+            {{-- <li class="treeview">
                 <a href="#">
                     <i data-feather="mail"></i> <span>Mailbox</span>
                     <span class="pull-right-container">
@@ -64,9 +64,9 @@
                     <li><a href="mailbox_compose.html"><i class="ti-more"></i>Compose</a></li>
                     <li><a href="mailbox_read_mail.html"><i class="ti-more"></i>Read</a></li>
                 </ul>
-            </li>
+            </li> --}}
 
-            <li class="header nav-small-cap">User Interface</li>
+            {{-- <li class="header nav-small-cap">User Interface</li>
 
             <li class="treeview">
                 <a href="#">
@@ -171,7 +171,7 @@
                     </li>
                     <li><a href="#">Level One</a></li>
                 </ul>
-            </li>
+            </li> --}}
 
         </ul>
     </section>
