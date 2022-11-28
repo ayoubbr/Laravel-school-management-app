@@ -76,8 +76,8 @@ class FeeCategoryController extends Controller
 
     public function FeeCategoryDelete($id)
     {
-        $user = FeeCategory::find($id);
-        $user->delete();
+        $fee_category = FeeCategory::find($id);
+        $fee_category->delete();
 
         $notification = array(
             'message' => 'Fee Category Deleted Successfully',

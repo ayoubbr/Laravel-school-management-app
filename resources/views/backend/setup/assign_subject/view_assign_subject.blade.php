@@ -9,9 +9,9 @@
                     <div class="col-12">
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student Fee Amount List</h3>
-                                <a href="{{ route('fee.amount.add') }}" style="float: right;"
-                                    class=" text-white btn btn-success mb-5"> Add Fee Amount</a>
+                                <h3 class="box-title">Assign Subject List</h3>
+                                <a href="{{ route('assign.subject.add') }}" style="float: right;"
+                                    class=" text-white btn   btn-success mb-5"> Add Assign Subject</a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
@@ -20,21 +20,22 @@
                                         <thead>
                                             <tr>
                                                 <th width="5%">SL</th>
-                                                <th>Fee Category</th>
-                                                <th width="35%">Action</th>
+                                                <th>Class Name</th>
+                                                <th width="25%">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($allData as $key => $amount)
+                                            @foreach ($allData as $key => $assign)
                                                 <tr>
                                                     <td>{{ $key + 1 }}</td>
-                                                    <td>{{ $amount->fee_category->name }}</td>
+                                                    <td> {{ $assign['student_class']['name'] }}</td>
+                                                    {{-- <td> {{ $assign->class_id }}</td> --}}
                                                     <td>
-                                                        <a href="{{ route('fee.amount.edit', $amount->fee_category_id) }}"
+                                                        <a href="{{ route('assign.subject.edit', $assign->class_id) }}"
                                                             class=" text-white btn btn-info">Edit</a>
-                                                        <a href="{{ route('fee.amount.details', $amount->fee_category_id) }}"
+                                                        <a href="{{ route('assign.subject.details', $assign->class_id) }}"
                                                             class=" text-white btn btn-primary">Details</a>
-                                                        <a href="{{ route('fee.amount.delete', $amount->fee_category_id) }}"
+                                                        <a href="{{ route('assign.subject.delete', $assign->class_id) }}"
                                                             class=" text-white btn btn-danger" id="delete">Delete</a>
                                                     </td>
                                                 </tr>
