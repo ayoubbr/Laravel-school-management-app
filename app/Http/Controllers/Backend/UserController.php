@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function user_view()
     {
-        $allData = User::all();
+        $allData = User::where('usertype', 'Admin')->get();
         return view('backend.user.user_view', compact('allData'));
     }
 
@@ -24,14 +24,16 @@ class UserController extends Controller
         $validatedData = $request->validate([
             'email' => 'required|unique:users',
             'name' => 'required',
-            'password' => 'required'
         ]);
 
         $data = new User();
-        $data->usertype = $request->usertype;
-        $data->email = $request->email;
+        $code = rand(0000,9999);
+        $data->usertype = 'Admin';
+        $data->role = $request->role;
         $data->name = $request->name;
-        $data->password = bcrypt($request->password);
+        $data->email = $request->email;
+        $data->password = bcrypt($code);
+        $data->code = $code; 
         $data->save();
 
         $notifcation = array(
@@ -51,7 +53,7 @@ class UserController extends Controller
         $data = User::find($id);
     	$data->name = $request->name;
     	$data->email = $request->email;
-        $data->usertype = $request->usertype;
+    	$data->role = $request->role;
     	$data->save();
 
     	$notification = array(

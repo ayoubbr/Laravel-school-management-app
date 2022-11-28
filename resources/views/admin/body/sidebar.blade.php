@@ -28,20 +28,21 @@
                 </a>
             </li>
 
-            <li class="treeview {{ $prefix == '/users' ? 'active' : '' }}">
-                <a href="#">
-                    <i data-feather="message-circle"></i>
-                    <span>Manage User</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-right pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ route('users.view') }}"><i class="ti-more"></i>View User</a></li>
-                    <li><a href="{{ route('users.add') }}"><i class="ti-more"></i>Add User</a></li>
-                </ul>
-            </li>
-
+            @if (Auth::user()->role == 'Admin')
+                <li class="treeview {{ $prefix == '/users' ? 'active' : '' }}">
+                    <a href="#">
+                        <i data-feather="message-circle"></i>
+                        <span>Manage User</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-right pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('users.view') }}"><i class="ti-more"></i>View User</a></li>
+                        <li><a href="{{ route('users.add') }}"><i class="ti-more"></i>Add User</a></li>
+                    </ul>
+                </li>
+            @endif
             <li class="treeview {{ $prefix == '/profile' ? 'active' : '' }}">
                 <a href="#">
                     <i data-feather="grid"></i> <span>Manage Profile</span>

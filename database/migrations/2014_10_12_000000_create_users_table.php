@@ -35,8 +35,6 @@ class CreateUsersTable extends Migration
             $table->integer('designation_id')->nullable();
             $table->double('salary')->nullable();
             $table->tinyInteger('status')->default(1);
-            $table->string('designation_id')->nullable();
-            $table->string('designation_id')->nullable();
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();

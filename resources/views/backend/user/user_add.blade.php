@@ -22,14 +22,15 @@
                                                     <div class="form-group">
                                                         <h5>User Role <span class="text-danger">*</span></h5>
                                                         <div class="controls">
-                                                            <select name="usertype" id="select" 
-                                                                class="form-control">
+                                                            <select name="role" id="role" class="form-control">
                                                                 <option value="" selected disabled>Select Role
                                                                 </option>
                                                                 <option value="Admin">Admin</option>
-                                                                <option value="User">User</option>
+                                                                <option value="Operator">Operator</option>
                                                             </select>
-                                                          
+                                                            @error('role')
+                                                                <span class="text-danger">{{ $message }}</span>
+                                                            @enderror
                                                         </div>
                                                     </div>
                                                 </div>
@@ -37,9 +38,8 @@
                                                     <div class="form-group">
                                                         <h5>Username <span class="text-danger">*</span></h5>
                                                         <div class="controls">
-                                                            <input type="text" name="name" class="form-control"
-                                                                >
-                                                                @error('name')
+                                                            <input type="text" name="name" class="form-control">
+                                                            @error('name')
                                                                 <span class="text-danger">{{ $message }}</span>
                                                             @enderror
                                                         </div>
@@ -51,16 +51,15 @@
                                                     <div class="form-group">
                                                         <h5>Email <span class="text-danger">*</span></h5>
                                                         <div class="controls">
-                                                            <input type="email" name="email" class="form-control"
-                                                                >
-                                                                @error('email')
+                                                            <input type="email" name="email" class="form-control">
+                                                            @error('email')
                                                                 <span class="text-danger">{{ $message }}</span>
                                                             @enderror
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-group">
+                                                    {{-- <div class="form-group">
                                                         <h5>Password <span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <input type="password" name="password" class="form-control"
@@ -69,7 +68,7 @@
                                                                 <span class="text-danger">{{ $message }}</span>
                                                             @enderror
                                                         </div>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                             {{-- <div class="form-group">

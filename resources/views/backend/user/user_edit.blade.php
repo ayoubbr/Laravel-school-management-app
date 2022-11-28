@@ -3,14 +3,11 @@
     <div class="content-wrapper">
         <div class="container-full">
             <!-- Content Header (Page header) -->
-
             <section class="content">
-
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
                         <h4 class="box-title">Update User</h4>
-
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -20,23 +17,20 @@
                                     @csrf
                                     <div class="row">
                                         <div class="col-12">
-
-
                                             <div class="row">
                                                 <div class="col-md-6">
-
                                                     <div class="form-group">
                                                         <h5>User Role <span class="text-danger">*</span></h5>
                                                         <div class="controls">
-                                                            <select name="usertype" required="" class="form-control">
+                                                            <select name="role" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">Select
                                                                     Role</option>
                                                                 <option value="Admin"
-                                                                    {{ $editData->usertype == 'Admin' ? 'selected' : '' }}>
+                                                                    {{ $editData->role == 'Admin' ? 'selected' : '' }}>
                                                                     Admin</option>
                                                                 <option value="Operator"
-                                                                    {{ $editData->usertype == 'User' ? 'selected' : '' }}>
-                                                                    User</option>
+                                                                    {{ $editData->role == 'Operator' ? 'selected' : '' }}>
+                                                                    Operator</option>
 
                                                             </select>
                                                         </div>
