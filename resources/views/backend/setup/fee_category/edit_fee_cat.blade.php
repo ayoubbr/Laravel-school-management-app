@@ -42,8 +42,11 @@
 
 
                                             <div class="text-xs-right">
-                                                <input type="submit" class=" text-white btn   btn-info mb-5" value="Update">
+                                                <input type="submit" class=" text-white btn   btn-info mb-5"
+                                                    value="Update">
                                             </div>
+                                        </div>
+                                    </div>
                                 </form>
 
                             </div>

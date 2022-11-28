@@ -8,13 +8,11 @@
                 <div class="box">
                     <div class="box-header with-border">
                         <h4 class="box-title">Add Fee Category</h4>
-
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="row">
                             <div class="col">
-
                                 <form method="post" action="{{ route('store.fee.category') }}">
                                     @csrf
                                     <div class="row">
