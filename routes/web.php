@@ -59,7 +59,6 @@ Route::prefix('profile')->group(function () {
     Route::post('/password/update', [ProfileController::class, 'password_update'])->name('password.update');
 });
 
-
 /// User Profile and Change Password 
 Route::prefix('setups')->group(function () {
     // Student Class Routes 
@@ -145,7 +144,6 @@ Route::prefix('setups')->group(function () {
     Route::post('designation/update/{id}', [DesignationController::class, 'DesignationUpdate'])->name('update.designation');
     Route::get('designation/delete/{id}', [DesignationController::class, 'DesignationDelete'])->name('designation.delete');
 });
-
 
 /// Student Registration Routes  
 Route::prefix('students')->group(function () {
