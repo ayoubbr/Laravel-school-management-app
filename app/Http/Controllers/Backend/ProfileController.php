@@ -58,20 +58,20 @@ class ProfileController extends Controller
 
 	public function password_update(Request $request)
 	{
-				$validatedData = $request->validate([
-					'oldpassword' => 'required',
-					'password' => 'required|confirmed',
-				]);
+		$validatedData = $request->validate([
+			'oldpassword' => 'required',
+			'password' => 'required|confirmed',
+		]);
 
-				$hashedPassword = Auth::user()->password;
-				if (Hash::check($request->oldpassword, $hashedPassword)) {
-					$user = User::find(Auth::id());
-					$user->password = Hash::make($request->password);
-					$user->save();
-					Auth::logout();
-					return redirect()->route('login');
-				} else {
-					return redirect()->back();
-				}
+		$hashedPassword = Auth::user()->password;
+		if (Hash::check($request->oldpassword, $hashedPassword)) {
+			$user = User::find(Auth::id());
+			$user->password = Hash::make($request->password);
+			$user->save();
+			Auth::logout();
+			return redirect()->route('login');
+		} else {
+			return redirect()->back();
+		}
 	}
 }

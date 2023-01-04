@@ -132,8 +132,8 @@
                             <a class="dropdown-item" href="/user/profile"><i class="ti-settings text-muted mr-2"></i>
                                 Manage Profile (jetstream)</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-white hover:text-sky-500" href="{{ route('admin.logout') }}"><i
-                                    class="ti-lock text-white mr-2"></i>
+                            <a class="dropdown-item hover:text-sky-500" href="{{ route('admin.logout') }}"><i
+                                    class="ti-lock  mr-2"></i>
                                 Logout</a>
                         </li>
                     </ul>

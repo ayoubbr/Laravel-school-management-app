@@ -21,13 +21,11 @@
                                                     <select name="year_id" required="" class="form-control">
                                                         <option value="" selected="" disabled="">Select Year
                                                         </option>
-
                                                         @foreach ($years as $year)
                                                             <option value="{{ $year->id }}"
                                                                 {{ @$year_id == $year->id ? 'selected' : '' }}>
                                                                 {{ $year->name }}</option>
                                                         @endforeach
-
                                                     </select>
                                                 </div>
                                             </div>
@@ -62,7 +60,7 @@
                             <div class="box-header with-border">
                                 <h3 class="box-title">Student List</h3>
                                 <a href="{{ route('student.registration.add') }}" style="float: right;"
-                                    class="text-white btn  btn-success mb-5"> Add Student </a>
+                                    class="text-white btn btn-success mb-5"> Add Student </a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
@@ -177,7 +175,7 @@
                                             <tfoot>
                                             </tfoot>
                                         </table>
-                                    	@endif
+                                    @endif
                                 </div>
                             </div>
                             <!-- /.box-body -->
