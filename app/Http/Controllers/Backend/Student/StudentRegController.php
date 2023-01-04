@@ -12,7 +12,7 @@ use App\Models\AssignStudent;
 use App\Models\DiscountStudent;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-
+use niklasravnsborg\LaravelPdf\Facades\Pdf;
 class StudentRegController extends Controller
 {
     public function StudentRegView()
@@ -241,8 +241,8 @@ class StudentRegController extends Controller
     {
         $data['details'] = AssignStudent::with(['student', 'discount'])->where('student_id', $student_id)->first();
 
-        // $pdf = PDF::loadView('backend.student.student_reg.student_details_pdf', $data);
-        // $pdf->SetProtection(['copy', 'print'], '', 'pass');
-        // return $pdf->stream('document.pdf');
+        $pdf = PDF::loadView('backend.student.student_reg.student_details_pdf', $data);
+        $pdf->SetProtection(['copy', 'print'], '', 'pass');
+        return $pdf->stream('document.pdf');
     }
 }
