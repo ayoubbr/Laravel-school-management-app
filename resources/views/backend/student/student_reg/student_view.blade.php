@@ -95,7 +95,9 @@
                                                             <img src="{{ !empty($value['student']['image']) ? url('upload/student_images/' . $value['student']['image']) : url('upload/no_image.jpg') }}"
                                                                 style="width: 60px; width: 60px;">
                                                         </td>
-                                                        <td> {{ $value->student->code }}</td>
+                                                        @if (Auth::user()->role == 'Admin')
+                                                            <td> {{ $value->student->code }}</td>
+                                                        @endif
                                                         <td>
                                                             <a title="Edit"
                                                                 href="{{ route('student.registration.edit', $value->student_id) }}"
@@ -152,7 +154,9 @@
                                                             <img src="{{ !empty($value['student']['image']) ? url('upload/student_images/' . $value['student']['image']) : url('upload/no_image.jpg') }}"
                                                                 style="width: 60px; width: 60px;">
                                                         </td>
-                                                        <td> {{ $value->code }}</td>
+                                                        @if (Auth::user()->role == 'Admin')
+                                                            <td> {{ $value->code }}</td>
+                                                        @endif
                                                         <td>
                                                             <a title="Edit"
                                                                 href="{{ route('student.registration.edit', $value->student_id) }}"
