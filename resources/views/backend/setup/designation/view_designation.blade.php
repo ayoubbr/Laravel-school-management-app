@@ -22,7 +22,6 @@
                                                 <th width="5%">SL</th>
                                                 <th>Name</th>
                                                 <th width="25%">Action</th>
-
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -35,15 +34,11 @@
                                                             class="text-white btn btn-info">Edit</a>
                                                         <a href="{{ route('designation.delete', $designation->id) }}"
                                                             class="text-white btn btn-danger" id="delete">Delete</a>
-
                                                     </td>
-
                                                 </tr>
                                             @endforeach
-
                                         </tbody>
                                         <tfoot>
-
                                         </tfoot>
                                     </table>
                                 </div>
@@ -51,15 +46,12 @@
                             <!-- /.box-body -->
                         </div>
                         <!-- /.box -->
-
-
                     </div>
                     <!-- /.col -->
                 </div>
                 <!-- /.row -->
             </section>
             <!-- /.content -->
-
         </div>
     </div>
 @endsection

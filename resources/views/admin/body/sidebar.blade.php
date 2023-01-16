@@ -95,7 +95,7 @@
                 </ul>
             </li>
 
-            {{-- <li class="treeview {{ $prefix == '/employees' ? 'active' : '' }}">
+           <li class="treeview {{ $prefix == '/employees' ? 'active' : '' }}">
                 <a href="#">
                     <i data-feather="package"></i> <span>Employee Management</span>
                     <span class="pull-right-container">
@@ -115,11 +115,9 @@
                             Attendance</a></li>
                     <li><a href="{{ route('employee.monthly.salary') }}"><i class="ti-more"></i>Employee Monthly
                             Salary</a></li>
-
-
                 </ul>
             </li>
-
+  {{--
             <li class="treeview {{ $prefix == '/marks' ? 'active' : '' }}">
                 <a href="#">
                     <i data-feather="edit-2"></i> <span> Marks Management</span>
