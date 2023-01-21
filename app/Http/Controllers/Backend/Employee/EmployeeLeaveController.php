@@ -59,7 +59,6 @@ class EmployeeLeaveController extends Controller
 
 	public function LeaveUpdate(Request $request, $id)
 	{
-
 		if ($request->leave_purpose_id == "0") {
 			$leavepurpose = new LeavePurpose();
 			$leavepurpose->name = $request->name;
