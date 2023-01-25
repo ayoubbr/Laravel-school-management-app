@@ -68,7 +68,7 @@
                                                                                 checked="checked"
                                                                                 {{ $data->attend_status == 'Present' ? 'checked' : '' }}>
                                                                             <label
-                                                                                |for="present{{ $key }}">Present</label>
+                                                                                for="present{{ $key }}">Present</label>
                                                                             <input name="attend_status{{ $key }}"
                                                                                 value="Leave" type="radio"
                                                                                 id="leave{{ $key }}"

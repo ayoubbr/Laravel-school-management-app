@@ -11,8 +11,8 @@ class EmployeeAttendanceController extends Controller
 {
     public function AttendanceView()
     {
-        // $data['allData'] = EmployeeAttendance::select('date')->groupBy('date')->orderBy('id', 'DESC')->get();
-        $data['allData'] = EmployeeAttendance::orderBy('id', 'DESC')->get();
+        $data['allData'] = EmployeeAttendance::select('date')->groupBy('date')->orderBy('id', 'DESC')->get();
+        // $data['allData'] = EmployeeAttendance::orderBy('id', 'DESC')->get();
         return view('backend.employee.employee_attendance.employee_attendance_view', $data);
     }
 
@@ -24,7 +24,7 @@ class EmployeeAttendanceController extends Controller
 
     public function AttendanceStore(Request $request)
     {
-        // EmployeeAttendance::where('date', date('Y-m-d', strtotime($request->date)))->delete();
+        EmployeeAttendance::where('date', date('Y-m-d', strtotime($request->date)))->delete();
         $countemployee = count($request->employee_id);
         for ($i = 0; $i < $countemployee; $i++) {
             $attend_status = 'attend_status' . $i;
@@ -43,11 +43,12 @@ class EmployeeAttendanceController extends Controller
         return redirect()->route('employee.attendance.view')->with($notification);
     }
 
-    // public function AttendanceEdit($date){
-    // 	$data['editData'] = EmployeeAttendance::where('date',$date)->get();
-    // 	$data['employees'] = User::where('usertype','employee')->get();
-    // 	return view('backend.employee.employee_attendance.employee_attendance_edit',$data);
-    // }
+    public function AttendanceEdit($date)
+    {
+        $data['editData'] = EmployeeAttendance::where('date', $date)->get();
+        $data['employees'] = User::where('usertype', 'employee')->get();
+        return view('backend.employee.employee_attendance.employee_attendance_edit', $data);
+    }
 
     public function AttendanceDetails($date)
     {
