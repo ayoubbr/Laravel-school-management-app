@@ -133,7 +133,7 @@
                             href="{{ route('marks.entry.grade') }}"><i class="ti-more"></i>Marks Grade</a></li>
                 </ul>
             </li>
-            {{-- <li class="treeview {{ $prefix == '/accounts' ? 'active' : '' }}">
+            <li class="treeview {{ $prefix == '/accounts' ? 'active' : '' }}">
                 <a href="#">
                     <i data-feather="inbox"></i> <span> Accounts Management</span>
                     <span class="pull-right-container">
@@ -149,7 +149,7 @@
                     <li class="{{ $route == 'other.cost.view' ? 'active' : '' }}"><a
                             href="{{ route('other.cost.view') }}"><i class="ti-more"></i>Other Cost</a></li>
                 </ul>
-            </li> --}}
+            </li>
             {{-- <li class="header nav-small-cap">Report Interface</li> --}}
             {{-- <li class="treeview {{ $prefix == '/reports' ? 'active' : '' }}">
                 <a href="#">
