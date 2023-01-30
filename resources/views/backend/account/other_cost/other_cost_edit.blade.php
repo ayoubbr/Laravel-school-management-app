@@ -65,9 +65,7 @@
                                                         <h5>Description <span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <textarea name="description" id="description" class="form-control" required="" placeholder="Textarea text"
-                                                                aria-invalid="false">
-																															{{ $editData->description }}
-																														</textarea>
+                                                                aria-invalid="false">{{ $editData->description }}</textarea>
                                                             <div class="help-block"></div>
                                                         </div>
                                                     </div>
