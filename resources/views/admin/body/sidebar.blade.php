@@ -150,8 +150,8 @@
                             href="{{ route('other.cost.view') }}"><i class="ti-more"></i>Other Cost</a></li>
                 </ul>
             </li>
-            {{-- <li class="header nav-small-cap">Report Interface</li> --}}
-            {{-- <li class="treeview {{ $prefix == '/reports' ? 'active' : '' }}">
+            <li class="header nav-small-cap">Report Interface</li>
+            <li class="treeview {{ $prefix == '/reports' ? 'active' : '' }}">
                 <a href="#">
                     <i data-feather="server"></i></i> <span> Reports Management</span>
                     <span class="pull-right-container">
@@ -163,7 +163,7 @@
                             href="{{ route('monthly.profit.view') }}"><i class="ti-more"></i>Monthly-Yearly
                             Profite</a></li>
 
-                    <li class="{{ $route == 'marksheet.generate.view' ? 'active' : '' }}"><a
+                    {{--    <li class="{{ $route == 'marksheet.generate.view' ? 'active' : '' }}"><a
                             href="{{ route('marksheet.generate.view') }}"><i class="ti-more"></i>MarkSheet
                             Generate</a></li>
 
@@ -177,9 +177,9 @@
 
                     <li class="{{ $route == 'student.idcard.view' ? 'active' : '' }}"><a
                             href="{{ route('student.idcard.view') }}"><i class="ti-more"></i>Student ID Card </a>
-                    </li>
+                    </li> --}}
                 </ul>
-            </li>  --}}
+            </li>
         </ul>
     </section>
 
