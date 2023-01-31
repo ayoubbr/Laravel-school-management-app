@@ -5,7 +5,6 @@
     @endphp
     <!-- sidebar-->
     <section class="sidebar">
-
         <div class="user-profile">
             <div class="ulogo">
                 <a href="{{ route('dashboard') }}">
@@ -50,10 +49,8 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ route('profile.view') }} "><i class="ti-more"></i>Your Profile</a></li>
                     <li><a href="{{ route('password.view') }} "><i class="ti-more"></i>Change Password</a></li>
-
                 </ul>
             </li>
-
             <li class="treeview {{ $prefix == '/setups' ? 'active' : '' }}">
                 <a href="#">
                     <i data-feather="credit-card"></i> <span>Setup Management</span>
@@ -74,7 +71,6 @@
                     <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Designation </a></li>
                 </ul>
             </li>
-
             <li class="treeview {{ $prefix == '/students' ? 'active' : '' }}">
                 <a href="#">
                     <i data-feather="hard-drive"></i></i> <span>Student Management</span>
@@ -162,22 +158,18 @@
                     <li class="{{ $route == 'monthly.profit.view' ? 'active' : '' }}"><a
                             href="{{ route('monthly.profit.view') }}"><i class="ti-more"></i>Monthly-Yearly
                             Profite</a></li>
-
-                    {{--    <li class="{{ $route == 'marksheet.generate.view' ? 'active' : '' }}"><a
+                    <li class="{{ $route == 'marksheet.generate.view' ? 'active' : '' }}"><a
                             href="{{ route('marksheet.generate.view') }}"><i class="ti-more"></i>MarkSheet
                             Generate</a></li>
-
                     <li class="{{ $route == 'attendance.report.view' ? 'active' : '' }}"><a
                             href="{{ route('attendance.report.view') }}"><i class="ti-more"></i>Attendance
                             Report</a></li>
-
                     <li class="{{ $route == 'student.result.view' ? 'active' : '' }}"><a
                             href="{{ route('student.result.view') }}"><i class="ti-more"></i>Student Result </a>
                     </li>
-
                     <li class="{{ $route == 'student.idcard.view' ? 'active' : '' }}"><a
                             href="{{ route('student.idcard.view') }}"><i class="ti-more"></i>Student ID Card </a>
-                    </li> --}}
+                    </li>
                 </ul>
             </li>
         </ul>
